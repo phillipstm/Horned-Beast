@@ -1,12 +1,12 @@
 import React from 'react';
-//import Pizza from './Pizza.js';
+import HornedBeast from './HornedBeast.js';
 
 class Main extends React.Component {
   render() {
     return (
       <main>
-        <HornedBeast="" toppings="Cheese" crust="Detroit Style"/>
-        <HornedBeast=""/>
+        <HornedBeast title="UniWhal" />
+        {/* <HornedBeast =""/> */}
       </main>
     )
   }
