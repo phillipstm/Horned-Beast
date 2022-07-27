@@ -1,8 +1,23 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
+import './Main.css';
+import {Container, Row} from 'react-bootstrap';
 
 class Main extends React.Component {
   render() {
+
+
+    let beasts = this.props.data.map((newBeast,index) => {
+
+      return <Beast
+      beastName={newBeast.name}
+      key={index}
+      image_url={newBeast.imageURL}
+      addBeast={this.props.addBeast}
+      handleOnShowModal={this.props.handleOnShowModal}
+      />
+      
+    });
     return (
       <main>
         <HornedBeast title="UniWhal" image_url="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" description="A unicorn and a narwhal nuzzling thier horns" />

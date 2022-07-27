@@ -73,7 +73,7 @@ Number and name of feature: ___1 Display images_____________________________
 
 Estimate of time needed to complete: ___1.5 hrs__
 
-Start time: _____
+Start time: __2:40___
 
 Finish time: _____
 
