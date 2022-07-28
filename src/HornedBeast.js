@@ -28,7 +28,7 @@ class HornedBeast extends React.Component {
         <Col className="mt-4">
           <Card className="h-100 p-3">
             <Card.Title onClick={this.helperFunctionH3Click} >{this.props.beastName}</Card.Title>
-            <Card.img src={this.props.image_url} alt={this.props.title} onClick={this.props.addBeast} />
+            <Card.Img src={this.props.image_url} alt={this.props.title} onClick={this.props.addBeast} />
             <p>{this.props.description}</p>
             <p>{this.state.likes} Like</p>
             <p>onClick={this.handleLikes}>Click to Like your favorite Beast</p>
