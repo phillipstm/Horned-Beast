@@ -15,7 +15,7 @@ constructor(props){
   };
 }
 
-addBeast = () => {
+addHornedBeast = () => {
   this.setState({
     beast: this.state.beast + '<3'
   });
@@ -27,7 +27,7 @@ addBeast = () => {
       <>
         <Header/>
         <Main
-        addBeast={this.addBeast}
+        addHornedBeast={this.addHornedBeast}
         data={data}
         />
         <Footer/>

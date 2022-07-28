@@ -1,7 +1,10 @@
 import React from 'react';
+import { Card, Button, Col} from 'react-bootstrap'
+
 
 class HornedBeast extends React.Component {
   render() {
+    
     console.log('This props', this.props)
     return (
       <div>
