@@ -1,42 +1,96 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
-// import './Main.css';
+import './Main.css';
 import { Container, Row } from 'react-bootstrap';
-
+debugger
 class Main extends React.Component {
   render() {
+    console.log('function passsed as prop', this.props.handleOnShowModal)
 
-// let beasts = [];
-    let beasts = this.props.data.map((newHornedBeast, index) => {
-
+    let beasts = this.props.data.map((addBeast, index) => {
+    
       return <HornedBeast
-        beastName={newHornedBeast.name}
+        beastName={addBeast.name}
         key={index}
-        image_url={newHornedBeast.imageURL}
-        addBeast={this.props.addHornedBeast}
-        handleOnShowModal={this.props.handleOnShowModal}
-      />
-
+        image_URL={addBeast.imageURL}
+        addBeast={this.props.addBeast}
+        handleOnShowModal={this.props.handleOnShowModal} />
     });
-    return (
-      <main>
-        <Container>
-          <Row lg={4} md={3} sm={2} xs={1}>
-            {beasts}
-          <HornedBeast title="UniWhal" image_url="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" description="A unicorn and a narwhal nuzzling thier horns" />
-          <HornedBeast title="Rhino Family" image_url="https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80" description="Parent rhino with two babies" />
-          <HornedBeast title="Unicorn Head" image_url="https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg" description="Someone wearing a very silly unicorn head mask" />
-          </Row>
-        </Container>
 
-
-
-
-
-
-      </main>
-    )
+  return(
+  
+    <Main>
+      <Container>
+       <Row lg={4} md={3} sm={2} xs={1}>
+        {beasts}
+      </Row>
+      </Container>
+    </Main>
+    
+    );
   }
 }
+
+//     const beastImages = this.props.imageUrls;
+
+//     return (
+//       <>
+//         <h2>{this.props.message}</h2>
+
+//         <Container>
+//           <Row>
+//             <Col>
+//               <BeastImage image_url={beastImages[0].image_url} />
+//             </Col>
+//             <Col>
+//               <BeastImage image_url={beastImages[1].image_url} />
+//             </Col>
+//             <Col>
+//               <BeastImage image_url={beastImages[2].image_url} />
+//             </Col>
+//           </Row>
+//           <Row>
+//             <Col>
+//               <BeastImage image_url={beastImages[3].image_url} />
+//             </Col>
+//             <Col>
+//               <BeastImage image_url={beastImages[4].image_url} />
+//             </Col>
+//             <Col>
+//               <BeastImage image_url={beastImages[5].image_url} />
+//             </Col>
+//           </Row>
+
+//         </Container>
+//       </div>
+//     );
+//   }
+// }
+
+
+// class BeastImage extends Component {
+
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       "status": "Liked"
+//     }
+//   }
+
+//   handleClick = () => {
+//     const newStatus = this.state.status === "Nope" ? "Liked" : "Nope";
+//     this.setState({ status: newStatus });
+//   }
+
+//   render() {
+//     return (
+//       <div onClick={this.handleClick}>
+//         <Image src={this.props.image_url} alt="a horned beast" round fluid />
+//         <h3>{this.state.status}</h3>
+//       </div>
+//     );
+//   }
+// }
+
 
 export default Main;
