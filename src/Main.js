@@ -2,17 +2,19 @@ import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import './Main.css';
 import { Container, Row } from 'react-bootstrap';
+
 debugger
+
 class Main extends React.Component {
   render() {
     console.log('function passsed as prop', this.props.handleOnShowModal)
 
-    let beasts = this.props.data.map((addBeast, index) => {
+    const beasts = this.props.data.map((newBeast, index) => {
     
       return <HornedBeast
-        beastName={addBeast.name}
+        beastName={newBeast.name}
         key={index}
-        image_URL={addBeast.imageURL}
+        image_URL={newBeast.imageURL}
         addBeast={this.props.addBeast}
         handleOnShowModal={this.props.handleOnShowModal} />
     });

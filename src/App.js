@@ -19,7 +19,7 @@ class App extends React.Component {
 
   addBeast = () => {
     this.setState({
-      beast: this.state.beast + '<3'
+      beast: this.state.beast + '❤️‍🔥'
     });
   }
 
