@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, Col } from 'react-bootstrap'
+import { Card, Button, Col } from 'react-bootstrap';
 //import Emoji from 'a11y-react-emoji';
 
 class HornedBeast extends React.Component {
@@ -36,19 +36,20 @@ class HornedBeast extends React.Component {
 
 
   render() {
+    console.log('Key?????',this.props.key);
     return (
       <>
         <Col className="mt-4">
           <Card className="h-100 p-3">
-            <Card.Title onClick={this.helperFunctionH3Click} >{this.props.beastName}</Card.Title>
+            <Card.Title>{this.props.beastName}</Card.Title>
             <Card.Img 
-            src={this.props.image_URL}
+            src={this.props.image_url}
              alt={this.props.beastName}
-             onClick={this.props.addBeast}
+             onClick={this.helperFunctionH3Click}
               />
             <p>{this.props.description}</p>
             <p>{this.state.likes} Like + ❤️‍🔥</p>
-            <p>onClick={this.handleLikes} Click to Like your favorite Beast</p>
+            <p>{this.handleLikes} Click to Like your favorite Beast</p>
             <div>{this.state.beastVote ? 'Vote for your favorite Horned Beast' : ''}</div>
             <Button onClick={this.beastVote}>Nice choice!</Button>
             <Button variant="success" onClick={this.votesGot}>Your vote was counted</Button>

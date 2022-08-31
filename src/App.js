@@ -4,24 +4,18 @@ import Header from './Header.js';
 import Main from './Main.js';
 import data from './data.json';
 import Modal from 'react-bootstrap/Modal';
-
+import Footer from './Footer.js';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      beast: '',
-      showModal: false,
-      selectBeast: ''
+     showModal: false,
+      selectBeast: null
     };
   }
 
-  addBeast = () => {
-    this.setState({
-      beast: this.state.beast + '❤️‍🔥'
-    });
-  }
 
   handleOnHide = () => {
     this.setState({
@@ -41,13 +35,12 @@ class App extends React.Component {
     return (
 
       <>
-        <Header beasts={this.state.beast} />
+        <Header />
         <Main
-          addBeast={this.state.addBeast}
           data={data}
           handleOnShowModal={this.handleOnShowModal} />
 
-        <footer>Which is your favorite?</footer>
+        <Footer />
 
         <Modal show={this.state.showModal} onHide={this.handleOnHide}>
           <Modal.Header closeButton>

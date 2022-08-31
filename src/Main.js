@@ -7,7 +7,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 class Main extends React.Component {
   render() {
-    console.log('function passsed as prop', this.props.handleOnShowModal);
 
     let beasts = this.props.data;
 
@@ -15,58 +14,23 @@ class Main extends React.Component {
       <Container>
         <Row lg={4} md={3} sm={2} xs={1}>
 
-          {beasts.map((newBeast, index) => (
+          {beasts.map((newBeast, i) => (
             <Col>
               <HornedBeast
-                beastName={newBeast.name}
-                key={index}
-                image_URL={newBeast.imageURL}
-                addBeast={this.props.addBeast}
+                beast={newBeast.name}
+                key={i}
+                // image_url={newBeast.image_url}
+                // addBeast={this.props.addBeast}
                 handleOnShowModal={this.props.handleOnShowModal}
               />
             </Col>
-          ))};
+          ))}
         </Row>
       </Container>
     );
   }
 }
 
-//     const beastImages = this.props.imageUrls;
-
-//     return (
-//       <>
-//         <h2>{this.props.message}</h2>
-
-//         <Container>
-//           <Row>
-//             <Col>
-//               <BeastImage image_url={beastImages[0].image_url} />
-//             </Col>
-//             <Col>
-//               <BeastImage image_url={beastImages[1].image_url} />
-//             </Col>
-//             <Col>
-//               <BeastImage image_url={beastImages[2].image_url} />
-//             </Col>
-//           </Row>
-//           <Row>
-//             <Col>
-//               <BeastImage image_url={beastImages[3].image_url} />
-//             </Col>
-//             <Col>
-//               <BeastImage image_url={beastImages[4].image_url} />
-//             </Col>
-//             <Col>
-//               <BeastImage image_url={beastImages[5].image_url} />
-//             </Col>
-//           </Row>
-
-//         </Container>
-//       </div>
-//     );
-//   }
-// }
 
 
 // class BeastImage extends Component {

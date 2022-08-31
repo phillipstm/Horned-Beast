@@ -1,11 +1,19 @@
-import React from 'react';
-import { Button } from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
-import data from './data.json';
+import { Component } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
-/**
- * This is setting child class
- */
-class SelectBeast extends React.Component{
+export default class SelectBeast extends Component {
 
+  render() {
+    return (
+      <Modal show={this.props.show} onHide={this.props.onClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{this.props.selectBeast}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>This is the last time!</Modal.Body>
+        <Modal.Footer>Which is the ugliest?
+        </Modal.Footer>
+      </Modal>
+    );
+  }
 }
