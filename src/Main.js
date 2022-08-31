@@ -1,34 +1,33 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import './Main.css';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-debugger
+//debugger
 
 class Main extends React.Component {
   render() {
-    console.log('function passsed as prop', this.props.handleOnShowModal)
+    console.log('function passsed as prop', this.props.handleOnShowModal);
 
-    const beasts = this.props.data.map((newBeast, index) => {
-    
-      return <HornedBeast
-        beastName={newBeast.name}
-        key={index}
-        image_URL={newBeast.imageURL}
-        addBeast={this.props.addBeast}
-        handleOnShowModal={this.props.handleOnShowModal} />
-    });
+    let beasts = this.props.data;
 
-  return(
-  
-    <Main>
+    return (
       <Container>
-       <Row lg={4} md={3} sm={2} xs={1}>
-        {beasts}
-      </Row>
+        <Row lg={4} md={3} sm={2} xs={1}>
+
+          {beasts.map((newBeast, index) => (
+            <Col>
+              <HornedBeast
+                beastName={newBeast.name}
+                key={index}
+                image_URL={newBeast.imageURL}
+                addBeast={this.props.addBeast}
+                handleOnShowModal={this.props.handleOnShowModal}
+              />
+            </Col>
+          ))};
+        </Row>
       </Container>
-    </Main>
-    
     );
   }
 }

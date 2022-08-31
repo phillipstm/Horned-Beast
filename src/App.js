@@ -39,23 +39,24 @@ class App extends React.Component {
   render() {
 
     return (
-    
-      <>
-      <Header beasts={this.state.beast} /><Main
-        addBeast={this.state.addBeast}
-        data={data}
-        handleOnShowModal={this.handleOnShowModal} />
 
-      <footer>Which is your favorite?</footer>
-  
-    <Modal show={this.state.showModal} onHide={this.handleOnHide}>
-    <Modal.Header closeButton>
-    <Modal.Title>{this.state.selectBeast}</Modal.Title>
-    </Modal.Header>
-    </Modal>
-</>
-    
-  );
+      <>
+        <Header beasts={this.state.beast} />
+        <Main
+          addBeast={this.state.addBeast}
+          data={data}
+          handleOnShowModal={this.handleOnShowModal} />
+
+        <footer>Which is your favorite?</footer>
+
+        <Modal show={this.state.showModal} onHide={this.handleOnHide}>
+          <Modal.Header closeButton>
+            <Modal.Title>{this.state.selectBeast}</Modal.Title>
+          </Modal.Header>
+        </Modal>
+      </>
+
+    );
   }
 }
 
