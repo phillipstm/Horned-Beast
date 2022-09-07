@@ -36,12 +36,13 @@ class HornedBeast extends React.Component {
 
 
   render() {
+    console.log('are we getting the beasts? :',this.props.beast)
     return (
       <>
         <Col className="mt-4">
           <Card className="h-100 p-3">
             <Card.Img
-              src={this.props.image_url}
+              src={this.props.beast.image_url}
               alt={this.props.beastName}
               // onClick={this.helperFunctionH3Click}
             />
