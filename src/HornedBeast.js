@@ -12,7 +12,6 @@ class HornedBeast extends React.Component {
   }
 
   handleLikes = () => {
-    console.log('Hello,knock if you can hear me');
     this.setState({
       likes: this.state.likes + 1,
     });
@@ -21,7 +20,8 @@ class HornedBeast extends React.Component {
 
 
   openModalHandler = () => {
-    // this.props.handleOnShowModal()
+    console.log('function that calls the func in app, from our image onClick');
+    this.props.handleOnShowModal()
   };
 
 

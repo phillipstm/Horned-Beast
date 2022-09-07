@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
      showModal: false,
-      selectBeast: null
+     selectBeast: null
     };
   }
 
@@ -24,10 +24,11 @@ class App extends React.Component {
   }
 
   handleOnShowModal = (name) => {
+   
     this.setState({
       showModal: true,
       selectBeast: name
-    })
+    });
   }
 
   render() {
