@@ -26,7 +26,6 @@ class HornedBeast extends React.Component {
 
 
   render() {
-    // console.log('are we getting the beasts? :',this.props.beast)
     return (
       <>
         <Col className="mt-4">
