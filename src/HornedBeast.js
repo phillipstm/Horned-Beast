@@ -21,7 +21,7 @@ class HornedBeast extends React.Component {
 
   openModalHandler = () => {
     console.log('function that calls the func in app, from our image onClick');
-    this.props.handleOnShowModal()
+    this.props.handleOnShowModal(this.props.beast);
   };
 
 
