@@ -1,20 +1,19 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import './Main.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row} from 'react-bootstrap';
 
-//debugger
+
 
 class Main extends React.Component {
   render() {
-    console.log('flippingBeast', this.props.handleOnShowModal)
+    // console.log('proof of life',this.props.data);
     let beasts = this.props.data.map((newBeast, index) => {
 
       return (
         <HornedBeast
           beast={newBeast}
           key={index}
-        // SelectBeast={this.props.SelectBeast}
         // handleOnShowModal={this.props.handleOnShowModal}
         />
       );
