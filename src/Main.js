@@ -7,14 +7,14 @@ import { Container, Row} from 'react-bootstrap';
 
 class Main extends React.Component {
   render() {
-    console.log('proof of life',this.props.data);
+    // console.log('proof of life',this.props.data);
     let beasts = this.props.data.map((newBeast, index) => {
 
       return (
         <HornedBeast
           // goes    <= this way for using props in child comp 
           beast={newBeast}
-          // key={index}
+          key={index}
         // SelectBeast={this.props.SelectBeast}
         // handleOnShowModal={this.props.handleOnShowModal}
         />

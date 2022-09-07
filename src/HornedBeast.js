@@ -30,13 +30,13 @@ class HornedBeast extends React.Component {
     });
   }
 
-  // helperFunctionH3Click = () => {
-  //   this.props.handleOnShowModal(this.props.beastName)
-  // };
+  openModalHandler = () => {
+    // this.props.handleOnShowModal()
+  };
 
 
   render() {
-    console.log('are we getting the beasts? :',this.props.beast)
+    // console.log('are we getting the beasts? :',this.props.beast)
     return (
       <>
         <Col className="mt-4">
@@ -44,7 +44,7 @@ class HornedBeast extends React.Component {
             <Card.Img
               src={this.props.beast.image_url}
               alt={this.props.beastName}
-              // onClick={this.helperFunctionH3Click}
+              onClick={this.openModalHandler}
             />
             {/* <Card.Body>
               <Card.Title>{this.props.beast.title}</Card.Title>
