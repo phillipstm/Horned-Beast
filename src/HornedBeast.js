@@ -39,7 +39,7 @@ class HornedBeast extends React.Component {
             />
             <Card.Body>
               <Card.Text>{this.props.beast.description}</Card.Text>
-              <Card.Text>{this.state.likes} ❤️‍🔥</Card.Text>
+              <Card.Text>{this.state.likes}<span role="img">❤️‍🔥</span></Card.Text>
             </Card.Body>
           </Card>
         </Col>
