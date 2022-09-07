@@ -1,11 +1,15 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar'
 
-class Footer extends React.Component {
+export default class Footer extends React.Component {
+
   render() {
     return (
-      <footer>Teresa Phillips</footer>
-   )
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand>
+          What is your favorite?
+      </Navbar.Brand>
+      </Navbar>
+   );
   }
 }
-
-export default Footer;
