@@ -12,10 +12,8 @@ class Main extends React.Component {
 
       return (
         <HornedBeast
-          // goes    <= this way for using props in child comp 
           beast={newBeast}
           key={index}
-        // SelectBeast={this.props.SelectBeast}
         // handleOnShowModal={this.props.handleOnShowModal}
         />
       );
