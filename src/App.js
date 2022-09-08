@@ -12,7 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false,
-      selectedBeast: {}
+      selectedBeast: {},
+      sortedData: data
     };
   }
 
@@ -31,6 +32,26 @@ class App extends React.Component {
     });
   }
 
+
+  handleSelect = (event) => {
+    let selected = parseInt(event.target.value);
+    if (selected === 1){
+      let newData = this.state.sortedData.filter((number) => number.horns === 1);
+      this.setState({ sortedData: newData});
+    }else if (selected === 2) {
+      let newData = this.state.sortedData.filter((number) => number.horns === 2);
+      this.setState({ sortedData: newData });
+    }else if (selected === 3){
+      let newData = this.state.sortedData.filter((number) => number.horns === 3);
+      this.setState({ sortedData: newData});
+    }else if (selected === 100){ 
+      let newData = this.state.sortedData.filter((number) => number.horns === 100);
+      this.setState({ sortedData: newData });
+    }else {
+      this.setState({ sortedData: data});
+    }
+  };
+
   render() {
 
     return (
@@ -38,8 +59,10 @@ class App extends React.Component {
       <>
         <Header />
         <Main
-          data={data}
-          handleOnShowModal={this.handleOnShowModal} />
+          data={this.state.sortedData}
+          handleOnShowModal={this.handleOnShowModal}
+          handleSelect={this.handleSelect}
+          />
 
         <Footer />
 
