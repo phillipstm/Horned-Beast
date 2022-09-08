@@ -14,7 +14,7 @@ class Main extends React.Component {
         <HornedBeast
           beast={newBeast}
           key={index}
-        // handleOnShowModal={this.props.handleOnShowModal}
+          handleOnShowModal={this.props.handleOnShowModal}
         />
       );
     });
