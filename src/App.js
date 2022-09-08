@@ -47,7 +47,8 @@ class App extends React.Component {
           <Modal.Header closeButton>
             <Modal.Title>{this.state.selectedBeast.title}</Modal.Title>
             <Modal.Body>
-            <img src={this.state.selectedBeast.image_url} />
+            <img src={this.state.selectedBeast.image_url}
+              alt={this.state.selectedBeast.title} />
             <p>{this.state.selectedBeast.description}</p>
           
             </Modal.Body>
